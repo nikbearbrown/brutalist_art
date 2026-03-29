@@ -36,17 +36,19 @@ Primary audiences:
 7. `/privacy` — Privacy Policy for Bear Brown LLC
 8. `/privacy/cookies` — Cookie Policy for Bear Brown LLC (dedicated page)
 9. `/terms-of-service` — Terms of Service for Bear Brown LLC
-10. `/substack` — Newsletter hub: card grid of all Substack sections
-11. `/substack/[section]` — Section page: description, "Follow on Substack" CTA, chronological article list
-12. `/substack/[section]/[slug]` — Full article: attribution banner, prose content, "Subscribe on Substack" footer CTA
-13. `/admin/login` — Admin login page (password form)
-14. `/admin/dashboard` — Admin dashboard (protected via middleware + `admin_session` cookie)
-15. `/admin/dashboard/blog` — Manage blog posts (list, create, edit, delete)
-16. `/admin/dashboard/blog/new` — New post editor
-17. `/admin/dashboard/blog/[id]/edit` — Edit existing post
-18. `/admin/dashboard/blog/import` — Import posts (Substack ZIP or blog export ZIP)
-19. `/admin/dashboard/tools` — Manage tools (link and artifact types)
-20. `/admin/dashboard/substack` — Manage Substack sections & import ZIP archives
+10. `/videos` — Videos page: pinned featured videos + paginated list with search and tag filtering
+11. `/substack` — Newsletter hub: card grid of all Substack sections
+12. `/substack/[section]` — Section page: description, "Follow on Substack" CTA, chronological article list
+13. `/substack/[section]/[slug]` — Full article: attribution banner, prose content, "Subscribe on Substack" footer CTA
+14. `/admin/login` — Admin login page (password form)
+15. `/admin/dashboard` — Admin dashboard (protected via middleware + `admin_session` cookie)
+16. `/admin/dashboard/blog` — Manage blog posts (list, create, edit, delete)
+17. `/admin/dashboard/blog/new` — New post editor
+18. `/admin/dashboard/blog/[id]/edit` — Edit existing post
+19. `/admin/dashboard/blog/import` — Import posts (Substack ZIP or blog export ZIP)
+20. `/admin/dashboard/tools` — Manage tools (link and artifact types)
+21. `/admin/dashboard/videos` — Manage videos (create, edit, delete, pin, publish/unpublish)
+22. `/admin/dashboard/substack` — Manage Substack sections & import ZIP archives
 
 ## Persistent layout (every page)
 
@@ -224,6 +226,49 @@ CREATE POLICY "service_role_tools" ON tools FOR ALL USING (true) WITH CHECK (tru
 
 ### Library
 - `lib/book-meta.ts` — `scanBooks(dir)` reads all subdirectories with `book.json`, scans HTML chapter files, returns `BookMeta[]` sorted by series position
+
+## Videos system — DONE
+
+### Database (`videos` table in Neon PostgreSQL)
+```sql
+CREATE TABLE IF NOT EXISTS videos (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  title TEXT NOT NULL,
+  description TEXT,
+  youtube_id TEXT NOT NULL,
+  tags TEXT[],
+  pinned BOOLEAN DEFAULT false,
+  published BOOLEAN DEFAULT true,
+  published_at TIMESTAMPTZ,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+```
+
+### Features
+- **Pinned videos**: Always shown at the top of the page, separate from pagination
+- **Tag filtering**: Server-side tag filtering via query parameter
+- **Pagination**: 5 videos per page, server-side with limit/offset
+- **Client-side search**: Filter current page results by title, description, or tags
+- **Draft/Published**: Videos can be saved as drafts or published immediately
+
+### API routes
+- `GET /api/videos` — public: paginated videos with pinned support, optional tag filter (`?page=1&limit=5&tag=tutorial`)
+- `GET /api/admin/videos` — admin: list all videos (pinned first, then by date)
+- `POST /api/admin/videos` — admin: create video
+- `PUT /api/admin/videos/[id]` — admin: update video
+- `DELETE /api/admin/videos/[id]` — admin: delete video
+
+### Admin UI (`/app/admin/dashboard/videos/page.tsx`)
+- Video list with title, pinned/published badges, YouTube ID, tags, description
+- Inline YouTube preview per video
+- "New Video" button → dialog form with title, YouTube ID, description, tags, pinned/published checkboxes
+- Edit and delete per video
+
+### Public page (`/app/videos/page.tsx`)
+- Server-rendered initial data (pinned + first page of videos)
+- `VideosBrowser` client component handles search, tag filtering, pagination
+- Each video rendered as YouTube iframe embed with title, date, description, tags
 
 ## Blog system — DONE
 
@@ -454,7 +499,7 @@ Server-side parser using adm-zip. Reads `posts.csv` + HTML files from a Substack
 - Protected by `middleware.ts` — redirects to `/admin/login` without valid session
 - Login page at `/admin/login` validates against `ADMIN_PASSWORD` env var
 - Session stored as `admin_session` httpOnly cookie (7-day expiry)
-- Layout with tabbed nav (Overview, Blog, Tools, Dev, Notes, Substack)
+- Layout with tabbed nav (Overview, Blog, Tools, Dev, Notes, Videos, Substack)
 - Blog management: create/edit/delete posts with rich text editor, publish/unpublish
 - Tools management: create/edit/delete tools with link/artifact type support
 - Substack management: create/edit/delete sections, import ZIP archives
@@ -625,6 +670,9 @@ app/
   tools/page.tsx                    # Tools directory (merges filesystem artifacts + DB link tools)
   tools/ToolsBrowser.tsx            # Client component: search + tag filter + card grid
   tools/[slug]/page.tsx             # Tool page (filesystem first, DB fallback)
+  videos/
+    page.tsx                        # Videos page (server component, fetches pinned + first page)
+    VideosBrowser.tsx               # Client component: search + tag filter + pagination
   books/
     page.tsx                        # Static books page (preserved)
     BooksBrowser.tsx                # Client component: search + tag filter + card grid
@@ -654,6 +702,7 @@ app/
     blog/[id]/edit/page.tsx         # Edit post editor
     blog/import/page.tsx            # Import: Substack ZIP or blog export ZIP
     tools/page.tsx                  # Tools manager (link + artifact types)
+    videos/page.tsx                 # Videos manager (CRUD, pin, publish)
     dev/page.tsx                    # Dev docs list (filesystem browser)
     notes/page.tsx                  # Notes list (filesystem browser)
     substack/page.tsx               # Substack section manager
@@ -671,6 +720,11 @@ app/
     route.ts                        # GET/POST tools
     [id]/route.ts                   # PUT/DELETE tool
     sync-artifacts/route.ts         # DEPRECATED: artifacts are now filesystem-driven
+  api/admin/videos/
+    route.ts                        # GET/POST videos (admin)
+    [id]/route.ts                   # PUT/DELETE video (admin)
+  api/videos/
+    route.ts                        # GET published videos (public, paginated, tag filter)
   api/admin/upload/route.ts         # POST: image upload to Vercel Blob
   api/admin/dev/sync/route.ts      # POST: scan public/dev/, return doc metadata
   api/admin/notes/sync/route.ts    # POST: scan public/notes/, return doc metadata
