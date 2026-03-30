@@ -54,7 +54,7 @@ Primary audiences:
 
 ### Header (`/components/Header/Header.tsx`) — DONE
 - Logo: theme-aware SVG (white for dark, black for light)
-- Nav: Home (`/`) | Blog (`/blog`) | Books (`/books`) | Dev (`/dev`) | Notes (`/notes`) | Tools (`/tools`) | About (`/about`)
+- Nav: Home (`/`) | Blog (`/blog`) | Notes (`/notes`) | Tools (`/tools`)
 - Social buttons (top right): GitHub, YouTube, Spotify, Substack — black button style
 - Dark/light mode toggle (ThemeToggle component)
 - Mobile hamburger menu with backdrop (lg breakpoint)
@@ -543,7 +543,7 @@ NEXT_PUBLIC_ANTHROPIC_API_KEY=   # only if embedding AI assistant directly
 ## What NOT to do
 - Do not use localStorage — use React state or sessionStorage
 - Do not add analytics or tracking beyond what's already present
-- Keep public nav to seven items: Home, Blog, Books, Dev, Notes, Tools, About
+- Keep public nav to four items: Home, Blog, Notes, Tools
 - Do not commit .env.local or credentials to git
 
 ## User Guide
