@@ -251,6 +251,17 @@ CREATE TABLE IF NOT EXISTS videos (
 - **Pagination**: 5 videos per page, server-side with limit/offset
 - **Client-side search**: Filter current page results by title, description, or tags
 - **Draft/Published**: Videos can be saved as drafts or published immediately
+- **YouTube import**: Import all videos from a YouTube channel or playlist as drafts
+- **Playlist browser**: Browse a channel's playlists and import any playlist
+- **Bulk operations**: Select multiple videos or filter by tag to bulk publish/unpublish/delete
+
+### YouTube integration (`lib/youtube.ts`)
+- Parses YouTube URLs: channel URLs, @handles, playlist URLs, raw channel/playlist IDs
+- Fetches all videos from a channel (via uploads playlist) or specific playlist
+- Handles pagination (up to 500 videos per import)
+- Skips deleted/private videos automatically
+- Fetches all playlists for a channel with video counts
+- Requires `YOUTUBE_API_KEY` environment variable (YouTube Data API v3)
 
 ### API routes
 - `GET /api/videos` — public: paginated videos with pinned support, optional tag filter (`?page=1&limit=5&tag=tutorial`)
@@ -258,12 +269,21 @@ CREATE TABLE IF NOT EXISTS videos (
 - `POST /api/admin/videos` — admin: create video
 - `PUT /api/admin/videos/[id]` — admin: update video
 - `DELETE /api/admin/videos/[id]` — admin: delete video
+- `POST /api/admin/videos/import-youtube` — admin: import videos from YouTube channel/playlist as drafts (skips duplicates, applies tags)
+- `POST /api/admin/videos/youtube-playlists` — admin: browse channel playlists (returns playlist IDs, titles, video counts)
+- `POST /api/admin/videos/bulk-update` — admin: bulk publish/unpublish videos by IDs or tag
+- `POST /api/admin/videos/bulk-delete` — admin: bulk delete videos by IDs or tag
 
 ### Admin UI (`/app/admin/dashboard/videos/page.tsx`)
 - Video list with title, pinned/published badges, YouTube ID, tags, description
 - Inline YouTube preview per video
 - "New Video" button → dialog form with title, YouTube ID, description, tags, pinned/published checkboxes
 - Edit and delete per video
+- **"Import from YouTube"** button → dialog: enter channel/@handle/playlist URL, optional tags and auto-tag name, imports as drafts
+- **"Browse Playlists"** button → dialog: enter channel/@handle, lists all playlists with video counts, click to import
+- **Tag filter bar**: filter video list by tag, with per-tag counts
+- **Bulk selection mode**: select individual videos or select all, then bulk publish/unpublish/delete
+- **Bulk actions by tag**: when filtering by tag, publish/unpublish/delete all videos with that tag
 
 ### Public page (`/app/videos/page.tsx`)
 - Server-rendered initial data (pinned + first page of videos)
@@ -512,6 +532,7 @@ ADMIN_PASSWORD=                  # Password for /admin/login — set a strong va
 NEXT_PUBLIC_SITE_URL=https://bearbrown.co  # Used in sitemap generation
 BLOB_READ_WRITE_TOKEN=           # Vercel Blob token (from Vercel dashboard → Storage → Blob)
 NEXT_PUBLIC_GA_ID=               # Google Analytics measurement ID (optional, e.g. G-XXXXXXXXXX)
+YOUTUBE_API_KEY=                 # YouTube Data API v3 key (for video import from channels/playlists)
 NEXT_PUBLIC_ANTHROPIC_API_KEY=   # only if embedding AI assistant directly
 ```
 
@@ -723,6 +744,10 @@ app/
   api/admin/videos/
     route.ts                        # GET/POST videos (admin)
     [id]/route.ts                   # PUT/DELETE video (admin)
+    import-youtube/route.ts         # POST: import videos from YouTube channel/playlist
+    youtube-playlists/route.ts      # POST: browse channel playlists
+    bulk-update/route.ts            # POST: bulk publish/unpublish by IDs or tag
+    bulk-delete/route.ts            # POST: bulk delete by IDs or tag
   api/videos/
     route.ts                        # GET published videos (public, paginated, tag filter)
   api/admin/upload/route.ts         # POST: image upload to Vercel Blob
@@ -751,6 +776,7 @@ lib/
   html-meta.ts                      # scanHtmlDir() + scanHtmlSubdirs() — extract metadata from HTML files
   admin-auth.ts                     # admin_session cookie check
   substack-parser.ts                # Substack ZIP parser (adm-zip)
+  youtube.ts                        # YouTube Data API v3 client (import videos, browse playlists)
   db.ts                             # Neon PostgreSQL client (sql tagged template)
   viz/
     registry.ts                     # data-viz name → lazy import map
