@@ -40,7 +40,9 @@ Primary audiences:
 11. `/substack` — Newsletter hub: card grid of all Substack sections
 12. `/substack/[section]` — Section page: description, "Follow on Substack" CTA, chronological article list
 13. `/substack/[section]/[slug]` — Full article: attribution banner, prose content, "Subscribe on Substack" footer CTA
-14. `/admin/login` — Admin login page (password form)
+14. `/talks` — Talks browser (grouped by subdirectory, searchable card grid, filesystem-driven)
+15. `/talks/[...slug]` — Full-viewport iframe of a talk HTML file (supports subdirectories)
+16. `/admin/login` — Admin login page (password form)
 15. `/admin/dashboard` — Admin dashboard (protected via middleware + `admin_session` cookie)
 16. `/admin/dashboard/blog` — Manage blog posts (list, create, edit, delete)
 17. `/admin/dashboard/blog/new` — New post editor
@@ -187,6 +189,19 @@ CREATE POLICY "service_role_tools" ON tools FOR ALL USING (true) WITH CHECK (tru
 - `/admin/dashboard` → Notes tab — lists all files with title, filename, tags, description, open/delete buttons
 - "Sync Notes" button refreshes the list from the filesystem
 - API: `POST /api/admin/notes/sync` — scans `public/notes/` and returns doc metadata
+
+## Talks system — DONE
+
+### Adding new talks
+1. Create an HTML file with `<title>`, `<meta name="description">`, and `<meta name="keywords">` tags
+2. Drop into `public/talks/<subfolder>/` (organized by event or topic)
+3. It appears automatically on `/talks` — no database needed
+4. Filesystem is the source of truth
+5. Optionally add `public/talks/filters.json` (JSON array of tag strings) to define curated filter tags
+
+### Public pages
+- `/talks` — grouped card browser of all talks in `public/talks/` subdirectories with search and tag filtering
+- `/talks/[...slug]` — full-viewport iframe of the talk HTML file with breadcrumb nav and "Full Screen" link
 
 ## Books system — DONE
 
@@ -707,6 +722,10 @@ app/
     page.tsx                        # Notes browser (grouped by subdirectory)
     NotesBrowser.tsx                # Client component: grouped search + tag filter
     [...slug]/page.tsx              # Full-viewport iframe for a note (catch-all)
+  talks/
+    page.tsx                        # Talks browser (grouped by subdirectory)
+    TalksBrowser.tsx                # Client component: grouped search + tag filter
+    [...slug]/page.tsx              # Full-viewport iframe for a talk (catch-all)
   privacy/page.tsx                  # Privacy Policy
   privacy/cookies/page.tsx          # Cookie Policy (dedicated page)
   terms-of-service/page.tsx         # Terms of Service
