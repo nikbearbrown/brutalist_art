@@ -144,7 +144,7 @@ export default function Home() {
             Let&apos;s Collaborate
           </h2>
           <p className="max-w-[600px] mx-auto text-background/70 text-lg mb-8">
-            Whether you need AI strategy, a technical advisor on your cap table,
+            Whether you need AI strategy, <a href="https://www.bearbrown.co/" target="_blank" rel="noopener noreferrer" className="underline text-background hover:text-background/80">bearbrown.co</a> creates bespoke AI,
             or your next great hire — let&apos;s talk.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
