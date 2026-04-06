@@ -36,7 +36,7 @@ const SERVICES = [
 ]
 
 const CONNECT_LINKS = [
-  { name: 'Substack', href: 'https://brutalistart.substack.com/' },
+  { name: 'Substack', href: 'https://www.skepticism.ai/' },
   { name: 'YouTube', href: 'https://www.youtube.com/@NikBearBrown' },
   { name: 'GitHub', href: 'https://github.com/nikbearbrown' },
   { name: 'Humanitarians AI', href: 'https://humanitarians.ai' },
