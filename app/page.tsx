@@ -167,10 +167,10 @@ export default function Home() {
       <section className="w-full py-16 md:py-24">
         <div className="container px-4 md:px-6 mx-auto">
           <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl text-center mb-2">
-            Music from Brutalist
+            Music from Musinique
           </h2>
           <p className="text-center text-muted-foreground mb-10">
-            Poetry, songwriting, and spoken word across genres and collaborations.
+            Musinique, great music for your decks and presentations.
           </p>
           <ArtistCarousel />
         </div>
