@@ -92,7 +92,7 @@ export default function Home() {
             </div>
             <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
               <iframe
-                src="https://www.youtube.com/embed/GN7yQntWJHU"
+                src="https://www.youtube.com/embed/xJrfurLD8J"
                 title="Brutalist.art"
                 width="100%"
                 height="100%"
