@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
               <li><strong>Email:</strong>{' '}
                 <a href="mailto:bear@bearbrown.co" className="text-primary hover:underline">bear@bearbrown.co</a>
               </li>
-              <li><strong>EIN:</strong> 41-4226710</li>
+
             </ul>
           </section>
 

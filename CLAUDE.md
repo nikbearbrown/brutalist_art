@@ -63,8 +63,7 @@ Primary audiences:
 
 ### Footer (`/components/Footer/Footer.tsx`) — DONE
 Four-column grid layout:
-- **Company Info:** Bear Brown LLC, 30 N Gould St Ste N, Sheridan WY 82801, bear@bearbrown.co, EIN: 41-4226710
-- **Publications:** Links to all 5 Substack publications (Bear Brown Co, Skepticism AI, Theorist AI, Hypothetical AI, Musinique)
+- **Company Info:** Bear Brown LLC, 30 N Gould St Ste N, Sheridan WY 82801, bear@bearbrown.co- **Publications:** Links to all 5 Substack publications (Bear Brown Co, Skepticism AI, Theorist AI, Hypothetical AI, Musinique)
 - **Connect:** GitHub, YouTube, Spotify, Substack (text links)
 - **Legal:** Privacy Policy, Cookie Policy, Terms of Service
 - Bottom bar: copyright
@@ -388,7 +387,7 @@ Prose-forward CV format with sections:
 Still needs: Substack link, musinique.com links, Bear Brown LLC details, publications list.
 
 ## Legal Pages — DONE
-All three pages follow the Humanitarians AI structural template, rewritten for Bear Brown LLC. Each references: Bear Brown LLC (Nik Bear Brown, Sole Member), 30 N Gould St Ste N, Sheridan WY 82801, bear@bearbrown.co, EIN 41-4226710, AI consulting services.
+All three pages follow the Humanitarians AI structural template, rewritten for Bear Brown LLC. Each references: Bear Brown LLC (Nik Bear Brown, Sole Member), 30 N Gould St Ste N, Sheridan WY 82801, bear@bearbrown.co, AI consulting services.
 
 ### Privacy Policy (`/app/privacy/page.tsx`)
 Sections: introduction, information we collect (contact data, inquiry content, consulting engagement data, analytics), how we use info, sharing (consent, legitimate interests, contract, legal, vital interests), third-party services (Vercel, Neon, Spotify, Substack, Anthropic, GitHub, YouTube), cookies reference (links to Cookie Policy page), data security, data retention, your privacy rights, children's privacy, changes, contact. Nav: Terms of Service ← → Cookie Policy.
