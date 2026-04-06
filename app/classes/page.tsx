@@ -5,8 +5,8 @@ import PrimaryButton from "@/components/ui/primary-button"
 import SecondaryButton from "@/components/ui/secondary-button"
 
 export const metadata: Metadata = {
-  title: "Courses | Nik Bear Brown",
-  description: "Courses taught by Professor Nik Bear Brown in artificial intelligence, machine learning, virtual environments, and computational biology at Northeastern University.",
+  title: "Courses | Brutalist",
+  description: "Courses in artificial intelligence, machine learning, virtual environments, and computational biology at Northeastern University.",
 }
 
 export default function ClassesPage() {
@@ -341,7 +341,7 @@ export default function ClassesPage() {
                       </div>
                       <div>
                         <strong className="block text-foreground">GitHub Repositories</strong>
-                        <a href="https://github.com/nikbearbrown" className="text-sm text-primary hover:underline">github.com/nikbearbrown</a>
+                        <a href="https://github.com/brutalist-art" className="text-sm text-primary hover:underline">github.com/brutalist-art</a>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -352,7 +352,7 @@ export default function ClassesPage() {
                       </div>
                       <div>
                         <strong className="block text-foreground">YouTube Channel</strong>
-                        <a href="https://www.youtube.com/user/nikbearbrown" className="text-sm text-primary hover:underline">youtube.com/user/nikbearbrown</a>
+                        <a href="https://www.youtube.com/user/brutalist" className="text-sm text-primary hover:underline">youtube.com/user/brutalist</a>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -437,13 +437,13 @@ export default function ClassesPage() {
           <section className="pt-12">
             <h2 className="text-3xl font-bold mb-6">Connect & Learn More</h2>
             <div className="grid gap-4">
-              <PrimaryButton href="https://github.com/nikbearbrown" className="w-full">
+              <PrimaryButton href="https://github.com/brutalist-art" className="w-full">
                 GitHub Repositories
               </PrimaryButton>
-              <SecondaryButton href="https://www.youtube.com/user/nikbearbrown" className="w-full">
+              <SecondaryButton href="https://www.youtube.com/user/brutalist" className="w-full">
                 YouTube Channel
               </SecondaryButton>
-              <PrimaryButton href="https://www.linkedin.com/in/nikbearbrown/" className="w-full">
+              <PrimaryButton href="https://www.linkedin.com/in/brutalist/" className="w-full">
                 LinkedIn Profile
               </PrimaryButton>
               <SecondaryButton href="/contact" className="w-full">

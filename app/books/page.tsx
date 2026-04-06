@@ -5,8 +5,8 @@ import PrimaryButton from "@/components/ui/primary-button"
 import SecondaryButton from "@/components/ui/secondary-button"
 
 export const metadata: Metadata = {
-  title: "Books by Nik Bear Brown",
-  description: "Explore the collection of books on AI, Programming, and Prompt Engineering authored by Nik Bear Brown",
+  title: "Books - Brutalist",
+  description: "Explore the collection of books on AI, Programming, and Prompt Engineering from Brutalist.art.",
 }
 
 export default function BooksPage() {

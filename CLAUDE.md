@@ -1,18 +1,17 @@
-# CLAUDE.md — bearbrown.co
+# CLAUDE.md — brutalist.art
 
 ## Who this site is for
-Nik Bear Brown — professor, educator, artist, musician, and AI innovator at Northeastern University. Owner of Bear Brown LLC (AI consulting) and connector of organizations to recent engineering grads.
+Brutalist.art — an AI-powered instructional design engine that produces backwards-designed HTML slide decks. Owned by Bear Brown LLC (Nik Bear Brown).
 
 Primary audiences:
-- Educators and instructional leaders looking for AI tools
-- Conference organizers and editors considering him as a speaker or contributor
-- Artists and students he collaborates with
-- Organizations seeking AI consulting or engineering talent
-- General public who found him via Substack, EdSurge, ISTE+ASCD, or YouTube
+- Educators and instructional designers looking for AI-powered slide deck creation
+- Conference speakers wanting coded HTML presentations
+- Non-developers who want browser-native slide decks without writing code
+- Anyone interested in backwards-design methodology for presentations
 
 ## Tech stack
 - Next.js (App Router)
-- Deployed on Vercel via GitHub repo: nikbearbrown/bearbrown_co
+- Deployed on Vercel via GitHub repo: nikbearbrown/brutalist_art
 - Tailwind CSS + @tailwindcss/typography (for prose article rendering)
 - TypeScript
 - next-themes for dark/light mode
@@ -23,7 +22,7 @@ Primary audiences:
 - adm-zip (server-side Substack ZIP parsing)
 
 ## Site structure
-1. `/` — Home (business card + Spotify player + AI contact assistant)
+1. `/` — Home (Brutalist landing page + Spotify player)
 2. `/tools` — Tools directory (card grid, Neon-driven)
 3. `/tools/[slug]` — Artifact tool embed page (full-viewport iframe)
 4. `/dev` — Dev docs browser (grouped by subdirectory, searchable card grid, filesystem-driven)
@@ -56,7 +55,7 @@ Primary audiences:
 
 ### Header (`/components/Header/Header.tsx`) — DONE
 - Logo: theme-aware SVG (white for dark, black for light)
-- Nav: Home (`/`) | Blog (`/blog`) | Videos (`/videos`) | Tools (`/tools`)
+- Nav: Home (`/`) | Blog (`/blog`) | Talks (`/talks`) | Videos (`/videos`) | Tools (`/tools`)
 - Social buttons (top right): GitHub, YouTube, Spotify, Substack — black button style
 - Dark/light mode toggle (ThemeToggle component)
 - Mobile hamburger menu with backdrop (lg breakpoint)
@@ -79,10 +78,10 @@ Four-column grid layout:
 
 ## Home page (`/app/page.tsx`) — DONE
 Four sections, alternating white/muted/dark backgrounds:
-1. **Hero** (two-column): Left — name (h1), subtitle "AI Consultant, Angel Advisor & Talent Connector", body text, "Work With Me" (mailto) button + "Read My Writing" label with 4 publication buttons (skepticism.ai, Musinique, Theorist, Hypothetical). Right — YouTube embed (GN7yQntWJHU).
-2. **What I Do** (3-column cards, muted bg): AI Consulting (Brain icon), Angel Advising (Rocket icon), Talent Connector (Users icon). Each with description + mailto link.
+1. **Hero** (two-column): Left — "Brutalist" (h1), subtitle "The slide deck is a program, not a canvas.", body copy about HTML presentations through conversation, "See It Live" (primary CTA → brutalist-intro.html) + "Explore Talks" (secondary CTA → /talks) + "Read My Writing" label with 4 publication buttons. Right — YouTube embed (GN7yQntWJHU).
+2. **What Brutalist Does** (3-column cards, muted bg): Slides as Code (Code icon), Built for Non-Developers (UserCheck icon), Backwards Design Built In (Target icon). Each with description + CTA link.
 3. **Connect** (centered, dark bg foreground/background inverted): "Let's Collaborate" heading, subtext, buttons for Substack, YouTube, GitHub, Humanitarians AI.
-4. **Music** (white bg): "Music from the Bear Brown Family & Friends" heading, ArtistCarousel component showing 13 artists with Spotify embeds, prev/next arrows, dot indicators, and per-artist links (Spotify, Apple Music, Musinique).
+4. **Music** (white bg): "Music from Brutalist" heading, ArtistCarousel component showing 13 artists with Spotify embeds, prev/next arrows, dot indicators, and per-artist links (Spotify, Apple Music, Musinique).
 
 ## ArtistCarousel (`/components/ArtistCarousel/ArtistCarousel.tsx`) — DONE
 Client component. Shows one artist at a time with:
@@ -544,7 +543,7 @@ Server-side parser using adm-zip. Reads `posts.csv` + HTML files from a Substack
 ```
 DATABASE_URL=                    # Neon PostgreSQL connection string (from Vercel marketplace or Neon dashboard)
 ADMIN_PASSWORD=                  # Password for /admin/login — set a strong value in production
-NEXT_PUBLIC_SITE_URL=https://bearbrown.co  # Used in sitemap generation
+NEXT_PUBLIC_SITE_URL=https://brutalist.art  # Used in sitemap generation
 BLOB_READ_WRITE_TOKEN=           # Vercel Blob token (from Vercel dashboard → Storage → Blob)
 NEXT_PUBLIC_GA_ID=               # Google Analytics measurement ID (optional, e.g. G-XXXXXXXXXX)
 YOUTUBE_API_KEY=                 # YouTube Data API v3 key (for video import from channels/playlists)
@@ -553,19 +552,19 @@ NEXT_PUBLIC_ANTHROPIC_API_KEY=   # only if embedding AI assistant directly
 
 ## Deployment
 - Push to main → auto-deploys to Vercel
-- Domain: bearbrown.co
+- Domain: brutalist.art
 
 ## What NOT to do
 - Do not use localStorage — use React state or sessionStorage
 - Do not add analytics or tracking beyond what's already present
-- Keep public nav to four items: Home, Blog, Videos, Tools
+- Keep public nav to five items: Home, Blog, Talks, Videos, Tools
 - Do not commit .env.local or credentials to git
 
 ## User Guide
 
 ### Overview
 
-bearbrown.co is Nik Bear Brown's personal site — part business card, part newsletter archive, part tool directory. It runs on Next.js with Vercel auto-deploy. The public site has no login; the admin dashboard is cookie-protected.
+brutalist.art is an AI-powered instructional design engine that produces backwards-designed HTML slide decks. Owned by Bear Brown LLC. It runs on Next.js with Vercel auto-deploy. The public site has no login; the admin dashboard is cookie-protected.
 
 ---
 
@@ -638,7 +637,7 @@ ALTER TABLE blog_posts ADD COLUMN IF NOT EXISTS cover_image TEXT;
 
 ```
 DATABASE_URL=postgresql://user:pass@ep-xxx.us-east-2.aws.neon.tech/neondb?sslmode=require
-NEXT_PUBLIC_SITE_URL=https://bearbrown.co
+NEXT_PUBLIC_SITE_URL=https://brutalist.art
 ```
 
 3. **Admin access** — Navigate to `/admin` (redirects to `/admin/login`). Enter the password set in `ADMIN_PASSWORD` env var. On success, an `admin_session` cookie is set (httpOnly, 7-day expiry) and you're redirected to the dashboard.

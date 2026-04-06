@@ -18,12 +18,12 @@ export async function generateMetadata({
     const doc = g.docs.find(d => d.slug === slugPath)
     if (doc) {
       return {
-        title: `${doc.title} - Talks | Bear Brown`,
+        title: `${doc.title} - Talks | Brutalist`,
         description: doc.description || doc.title,
       }
     }
   }
-  return { title: 'Talks - Bear Brown' }
+  return { title: 'Talks - Brutalist' }
 }
 
 export default async function TalkPage({

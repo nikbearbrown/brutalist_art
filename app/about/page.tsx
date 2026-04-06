@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About - Bear Brown',
-  description: 'Nik Bear Brown — professor, educator, artist, musician, and AI innovator at Northeastern University.',
+  title: 'About - Brutalist',
+  description: 'Brutalist.art — an AI-powered instructional design engine for educators, students, and communities.',
 }
 
 export default function AboutPage() {
@@ -14,8 +14,7 @@ export default function AboutPage() {
         <div className="prose prose-lg dark:prose-invert max-w-none space-y-8">
           <section>
             <p>
-              Nik Bear Brown is a professor at Northeastern University, where he teaches courses on AI, machine learning,
-              and prompt engineering. His work sits at the intersection of technology, education, and creative expression —
+              Brutalist.art is an AI-powered instructional design engine built at the intersection of technology, education, and creative expression —
               building tools that make AI accessible and useful for educators, students, and communities.
             </p>
           </section>
@@ -49,7 +48,7 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold mb-4">Humanitarians AI</h2>
             <p>
               Bear founded{' '}
-              <a href="https://github.com/nikbearbrown" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              <a href="https://github.com/brutalist-art" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                 Humanitarians AI
               </a>
               , a 501(c)(3) nonprofit dedicated to developing ethical AI solutions for education, healthcare, and
@@ -74,14 +73,14 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold mb-4">Connect</h2>
             <p>
               Bear is open to consulting, collaboration, and speaking engagements. Reach out at{' '}
-              <a href="mailto:bear@bearbrown.co" className="text-primary hover:underline">bear@bearbrown.co</a>.
+              <a href="mailto:bear@brutalist.art" className="text-primary hover:underline">bear@brutalist.art</a>.
             </p>
             <div className="flex flex-wrap gap-4 mt-4 not-prose">
-              <a href="https://github.com/nikbearbrown" target="_blank" rel="noopener noreferrer"
+              <a href="https://github.com/brutalist-art" target="_blank" rel="noopener noreferrer"
                 className="inline-flex h-10 items-center justify-center rounded-md px-8 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-black text-white shadow hover:bg-gray-800 dark:border dark:border-input dark:bg-background dark:text-foreground dark:shadow-sm dark:hover:bg-accent dark:hover:text-accent-foreground">
                 GitHub
               </a>
-              <a href="https://www.youtube.com/@NikBearBrown" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.youtube.com/@Brutalist" target="_blank" rel="noopener noreferrer"
                 className="inline-flex h-10 items-center justify-center rounded-md px-8 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-black text-white shadow hover:bg-gray-800 dark:border dark:border-input dark:bg-background dark:text-foreground dark:shadow-sm dark:hover:bg-accent dark:hover:text-accent-foreground">
                 YouTube
               </a>

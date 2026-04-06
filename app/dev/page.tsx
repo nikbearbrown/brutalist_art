@@ -6,7 +6,7 @@ import DevBrowser from './DevBrowser'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Dev Docs - Bear Brown',
+  title: 'Dev Docs - Brutalist',
   description: 'Developer documentation, guides, and reference materials.',
 }
 

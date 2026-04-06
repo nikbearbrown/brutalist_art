@@ -5,8 +5,8 @@ import BlogFeed from './BlogFeed'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Blog - Bear Brown',
-  description: 'Writing on AI, startups, education, and technology by Nik Bear Brown.',
+  title: 'Blog - Brutalist',
+  description: 'Writing on AI, instructional design, and technology from Brutalist.art.',
 }
 
 export default async function BlogPage() {

@@ -7,7 +7,7 @@ import TalksBrowser from './TalksBrowser'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Talks - Bear Brown',
+  title: 'Talks - Brutalist',
   description: 'Browse talks and presentations.',
 }
 

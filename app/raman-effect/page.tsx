@@ -41,7 +41,7 @@ export default function RAMANEffectPage() {
               </p>
               
               <p>
-                Led by Professor Nik Bear Brown, PhD, MBA, this initiative aims to develop cutting-edge AI software capable of analyzing complex spectral data from wastewater samples to detect pathogens, pollutants, and substances of concern with unprecedented sensitivity and specificity.
+                Led by Brutalist.art, this initiative aims to develop cutting-edge AI software capable of analyzing complex spectral data from wastewater samples to detect pathogens, pollutants, and substances of concern with unprecedented sensitivity and specificity.
               </p>
               
               <div className="flex flex-col md:flex-row gap-6 my-8">

@@ -26,8 +26,8 @@ export async function generateMetadata({
   const doc = getArtifactDoc(slug)
   if (doc) {
     return {
-      title: `${doc.title} - Bear Brown Tools`,
-      description: doc.description || `${doc.title} — AI tool by Bear Brown`,
+      title: `${doc.title} - Brutalist Tools`,
+      description: doc.description || `${doc.title} — AI tool by Brutalist`,
     }
   }
 
@@ -36,13 +36,13 @@ export async function generateMetadata({
     const rows = await sql`SELECT name, description FROM tools WHERE slug = ${slug}`
     if (rows.length > 0) {
       return {
-        title: `${rows[0].name} - Bear Brown Tools`,
-        description: rows[0].description || `${rows[0].name} — AI tool by Bear Brown`,
+        title: `${rows[0].name} - Brutalist Tools`,
+        description: rows[0].description || `${rows[0].name} — AI tool by Brutalist`,
       }
     }
   } catch {}
 
-  return { title: 'Tool - Bear Brown' }
+  return { title: 'Tool - Brutalist' }
 }
 
 export default async function ToolPage({

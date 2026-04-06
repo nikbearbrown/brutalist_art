@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy - Bear Brown LLC',
-  description: 'Cookie policy for Bear Brown LLC and bearbrown.co',
+  title: 'Cookie Policy - Brutalist Art LLC',
+  description: 'Cookie policy for Brutalist Art LLC and brutalist.art',
 }
 
 export default function CookiePolicyPage() {
@@ -21,14 +21,14 @@ export default function CookiePolicyPage() {
             <p>
               Cookies are small text files that are placed on your computer or mobile device when you visit a website.
               They are widely used to make websites work more efficiently and to provide information to website owners.
-              This Cookie Policy explains how <strong>Bear Brown LLC</strong> uses cookies and similar technologies on{' '}
-              <strong>bearbrown.co</strong>.
+              This Cookie Policy explains how <strong>Brutalist Art LLC</strong> uses cookies and similar technologies on{' '}
+              <strong>brutalist.art</strong>.
             </p>
             <ul className="list-none pl-0 mt-4 space-y-1 text-base">
-              <li><strong>Company:</strong> Bear Brown LLC (Nik Bear Brown, Sole Member)</li>
+              <li><strong>Company:</strong> Brutalist Art LLC (Sole Member)</li>
               <li><strong>Address:</strong> 30 N Gould St Ste N, Sheridan, WY 82801</li>
               <li><strong>Email:</strong>{' '}
-                <a href="mailto:bear@bearbrown.co" className="text-primary hover:underline">bear@bearbrown.co</a>
+                <a href="mailto:bear@brutalist.art" className="text-primary hover:underline">bear@brutalist.art</a>
               </li>
               <li><strong>EIN:</strong> 41-4226710</li>
             </ul>
@@ -86,7 +86,7 @@ export default function CookiePolicyPage() {
             <p>
               Our website includes embedded content from third-party services. When these embeds load, the
               third-party provider may set their own cookies in your browser. These cookies are not controlled
-              by Bear Brown LLC.
+              by Brutalist Art LLC.
             </p>
             <ul className="list-disc pl-6 mt-4 space-y-2">
               <li>
@@ -155,11 +155,11 @@ export default function CookiePolicyPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
             <p>
-              If you have questions about our use of cookies, please contact Bear Brown LLC:
+              If you have questions about our use of cookies, please contact Brutalist Art LLC:
             </p>
             <ul className="list-none pl-0 mt-4 space-y-1 text-base">
               <li><strong>Email:</strong>{' '}
-                <a href="mailto:bear@bearbrown.co" className="text-primary hover:underline">bear@bearbrown.co</a>
+                <a href="mailto:bear@brutalist.art" className="text-primary hover:underline">bear@brutalist.art</a>
               </li>
               <li><strong>Address:</strong> 30 N Gould St Ste N, Sheridan, WY 82801</li>
             </ul>

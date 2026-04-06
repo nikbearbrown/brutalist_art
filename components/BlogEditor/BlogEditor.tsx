@@ -47,7 +47,7 @@ interface BlogPost {
   published: boolean
 }
 
-const DEFAULT_BYLINE = `Few advisors put skin in the game the way Bear Brown does — building bespoke AI solutions, taking equity instead of checks for early-stage advising, and connecting startups with top engineering graduates before the competition finds them. An Associate Teaching Professor of Engineering at Northeastern University, Ph.D., MBA, and founder of Bear Brown & Company, he's spent years making AI practical, ethical, and accessible — inside the classroom, inside the lab, and inside the cap table.\nFollow his work at https://www.bearbrown.co/`
+const DEFAULT_BYLINE = `Few advisors put skin in the game the way Brutalist does — building bespoke AI solutions, taking equity instead of checks for early-stage advising, and connecting startups with top engineering graduates before the competition finds them. An Associate Teaching Professor of Engineering at Northeastern University, Ph.D., MBA, and founder of Brutalist, he's spent years making AI practical, ethical, and accessible — inside the classroom, inside the lab, and inside the cap table.\nFollow his work at https://www.brutalist.art/`
 
 function slugify(text: string): string {
   return text

@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Videos',
-  description: 'Video tutorials, talks, and educational content from Bear Brown.',
+  description: 'Video tutorials, talks, and educational content from Brutalist.art.',
 }
 
 export default async function VideosPage() {

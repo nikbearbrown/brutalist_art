@@ -9,6 +9,7 @@ import ThemeToggle from '@/components/ThemeToggle'
 
 const NAV_ITEMS = [
   { name: 'Blog', href: '/blog' },
+  { name: 'Talks', href: '/talks' },
   { name: 'Videos', href: '/videos' },
   { name: 'Tools', href: '/tools' },
 ]
@@ -44,7 +45,7 @@ export default function Header() {
       <div className="container px-4 md:px-6 mx-auto flex h-16 items-center justify-between">
         <div className="flex items-center gap-6 md:gap-10">
           <Link href="/" className="text-xl font-bold tracking-tight hover:text-foreground/80 transition-colors">
-            Bear Brown
+            Brutalist
           </Link>
           <nav className="hidden lg:flex gap-6">
             {NAV_ITEMS.map((item) => (

@@ -23,7 +23,7 @@ export async function generateMetadata({
       }
     }
   }
-  return { title: 'Dev Docs - Bear Brown' }
+  return { title: 'Dev Docs - Brutalist' }
 }
 
 export default async function DevDocPage({

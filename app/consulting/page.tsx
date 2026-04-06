@@ -4,8 +4,8 @@ import PrimaryButton from "@/components/ui/primary-button"
 import SecondaryButton from "@/components/ui/secondary-button"
 
 export const metadata: Metadata = {
-  title: "AI Consulting - Nik Bear Brown",
-  description: "Expert AI consulting services for education and nonprofits, led by Nik Bear Brown in collaboration with Humanitarians AI",
+  title: "AI Consulting - Brutalist",
+  description: "Expert AI consulting services for education and nonprofits, led by Brutalist in collaboration with Humanitarians AI",
 }
 
 export default function ConsultingPage() {
@@ -16,10 +16,10 @@ export default function ConsultingPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">AI Consulting</h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Cutting-edge AI solutions for education and social impact, led by Nik Bear Brown. I provide expert consulting services in collaboration with Humanitarians AI to help organizations leverage AI for transformation.
+            Cutting-edge AI solutions for education and social impact, led by Brutalist. I provide expert consulting services in collaboration with Humanitarians AI to help organizations leverage AI for transformation.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <PrimaryButton href="mailto:bear@bearbrown.co?subject=Consulting Inquiry">
+            <PrimaryButton href="mailto:bear@brutalist.art?subject=Consulting Inquiry">
               Request a Consultation
             </PrimaryButton>
             <SecondaryButton href="#services">
@@ -50,7 +50,7 @@ export default function ConsultingPage() {
           <section>
             <h2 className="text-3xl font-bold mb-6">About Me</h2>
             <div className="p-6 border rounded-lg">
-              <h3 className="text-2xl font-bold mb-3">Nik Bear Brown</h3>
+              <h3 className="text-2xl font-bold mb-3">Brutalist</h3>
               <p className="text-lg italic mb-4">AI Education Specialist & Technical Advisor</p>
               <div className="prose prose-lg dark:prose-invert">
                 <p>I bring exceptional credentials and practical experience to every project:</p>
@@ -248,13 +248,13 @@ export default function ConsultingPage() {
                 </div>
               </div>
               <div className="mt-6 flex flex-wrap gap-4">
-                <PrimaryButton href="mailto:bear@bearbrown.co?subject=Consulting Inquiry">
+                <PrimaryButton href="mailto:bear@brutalist.art?subject=Consulting Inquiry">
                   Contact Me
                 </PrimaryButton>
-                <SecondaryButton href="https://github.com/nikbearbrown" target="_blank" rel="noopener noreferrer">
+                <SecondaryButton href="https://github.com/brutalist-art" target="_blank" rel="noopener noreferrer">
                   View My GitHub
                 </SecondaryButton>
-                <SecondaryButton href="https://www.linkedin.com/in/nikbearbrown/" target="_blank" rel="noopener noreferrer">
+                <SecondaryButton href="https://www.linkedin.com/in/brutalist/" target="_blank" rel="noopener noreferrer">
                   Connect on LinkedIn
                 </SecondaryButton>
               </div>
@@ -265,7 +265,7 @@ export default function ConsultingPage() {
           <section>
             <h2 className="text-3xl font-bold mb-6">Transform Your Organization with AI</h2>
             <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
-              <PrimaryButton href="mailto:bear@bearbrown.co?subject=Consulting Inquiry">
+              <PrimaryButton href="mailto:bear@brutalist.art?subject=Consulting Inquiry">
                 Request a Consultation
               </PrimaryButton>
               <SecondaryButton href="/about">

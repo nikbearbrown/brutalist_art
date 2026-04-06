@@ -8,8 +8,8 @@ import ToolsBrowser from './ToolsBrowser'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Tools - Bear Brown',
-  description: 'AI tools directory curated by Nik Bear Brown.',
+  title: 'Tools - Brutalist',
+  description: 'AI tools directory from Brutalist.art.',
 }
 
 interface Tool {

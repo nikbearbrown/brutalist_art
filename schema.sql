@@ -1,5 +1,5 @@
 -- =============================================================================
--- bearbrown.co — Full Neon PostgreSQL Schema
+-- brutalist.art — Full Neon PostgreSQL Schema
 -- Run this in your Neon SQL Editor to set up a fresh database.
 -- Safe to re-run: uses IF NOT EXISTS / IF NOT EXISTS throughout.
 -- =============================================================================

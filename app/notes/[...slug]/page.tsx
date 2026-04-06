@@ -23,7 +23,7 @@ export async function generateMetadata({
       }
     }
   }
-  return { title: 'Notes - Bear Brown' }
+  return { title: 'Notes - Brutalist' }
 }
 
 export default async function NoteDocPage({

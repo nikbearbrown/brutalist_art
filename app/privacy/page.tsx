@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - Bear Brown LLC',
-  description: 'Privacy policy for Bear Brown LLC, AI consulting services, and bearbrown.co',
+  title: 'Privacy Policy - Brutalist Art LLC',
+  description: 'Privacy policy for Brutalist Art LLC, AI consulting services, and brutalist.art',
 }
 
 export default function PrivacyPolicyPage() {
@@ -19,17 +19,17 @@ export default function PrivacyPolicyPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
             <p>
-              Welcome to <strong>bearbrown.co</strong>, operated by <strong>Bear Brown LLC</strong> (Nik Bear Brown, Sole Member),
+              Welcome to <strong>brutalist.art</strong>, operated by <strong>Brutalist Art LLC</strong> (Sole Member),
               a Wyoming limited liability company providing AI consulting services. We are committed to protecting your
               personal information and your right to privacy. If you have any questions or concerns about this privacy
               policy or our practices with regard to your personal information, please contact us at{' '}
-              <a href="mailto:bear@bearbrown.co" className="text-primary hover:underline">bear@bearbrown.co</a>.
+              <a href="mailto:bear@brutalist.art" className="text-primary hover:underline">bear@brutalist.art</a>.
             </p>
             <ul className="list-none pl-0 mt-4 space-y-1 text-base">
-              <li><strong>Company:</strong> Bear Brown LLC (Nik Bear Brown, Sole Member)</li>
+              <li><strong>Company:</strong> Brutalist Art LLC (Sole Member)</li>
               <li><strong>Address:</strong> 30 N Gould St Ste N, Sheridan, WY 82801</li>
               <li><strong>Email:</strong>{' '}
-                <a href="mailto:bear@bearbrown.co" className="text-primary hover:underline">bear@bearbrown.co</a>
+                <a href="mailto:bear@brutalist.art" className="text-primary hover:underline">bear@brutalist.art</a>
               </li>
               <li><strong>EIN:</strong> 41-4226710</li>
             </ul>
@@ -105,7 +105,7 @@ export default function PrivacyPolicyPage() {
               <li><strong>YouTube:</strong> Video content hosting</li>
             </ul>
             <p className="mt-4">
-              We encourage you to review the privacy policies of these third-party services. Bear Brown LLC is not
+              We encourage you to review the privacy policies of these third-party services. Brutalist Art LLC is not
               responsible for the privacy practices of external services.
             </p>
           </section>
@@ -198,11 +198,11 @@ export default function PrivacyPolicyPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
             <p>
-              If you have questions or comments about this privacy policy, please contact Bear Brown LLC:
+              If you have questions or comments about this privacy policy, please contact Brutalist Art LLC:
             </p>
             <ul className="list-none pl-0 mt-4 space-y-1 text-base">
               <li><strong>Email:</strong>{' '}
-                <a href="mailto:bear@bearbrown.co" className="text-primary hover:underline">bear@bearbrown.co</a>
+                <a href="mailto:bear@brutalist.art" className="text-primary hover:underline">bear@brutalist.art</a>
               </li>
               <li><strong>Address:</strong> 30 N Gould St Ste N, Sheridan, WY 82801</li>
             </ul>

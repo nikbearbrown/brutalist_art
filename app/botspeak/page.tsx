@@ -41,7 +41,7 @@ export default function BotspeakPage() {
     </p>
     
     <p>
-      Led by Dr. Nik Bear Brown, Associate Teaching Professor at Northeastern University, our show-and-tell approach demonstrates these skills through practical AI project development, giving you both theoretical understanding and hands-on experience.
+      Led by Brutalist.art, our show-and-tell approach demonstrates these skills through practical AI project development, giving you both theoretical understanding and hands-on experience.
     </p>
     
     <h3 className="text-xl font-bold mt-6 mb-3">The Nine Pillars of Botspeak</h3>

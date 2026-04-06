@@ -41,7 +41,7 @@ export default function DayhoffPage() {
               </p>
               
               <p>
-                Led by Professor Nik Bear Brown, PhD, MBA, this educational experiment emphasizes learning through building, inviting contributors to discover effective approaches through practical implementation rather than claiming definitive solutions.
+                Led by Brutalist.art, this educational experiment emphasizes learning through building, inviting contributors to discover effective approaches through practical implementation rather than claiming definitive solutions.
               </p>
               
               <div className="flex flex-col md:flex-row gap-6 my-8">

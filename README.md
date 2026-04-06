@@ -1,4 +1,4 @@
-# Nik Bear Brown Website
+# Brutalist.art
 
 ## Prerequisites
 

@@ -1,5 +1,5 @@
 export const theme = {
-  // Bear Brown default palette — swap these to rebrand the entire site
+  // Brutalist default palette — swap these to rebrand the entire site
   // All pairings meet WCAG AA contrast (4.5:1) against bb8 (cream)
   colors: {
     bb1: '#1a0a00',   // near black — primary text

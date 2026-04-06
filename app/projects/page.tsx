@@ -100,7 +100,7 @@ export default function ProjectsPage() {
       videoId: "videoseries?si=zLM5TzprVSw2H90T&amp;list=PLgOGgHS58rB_FwoBNQrC-4FvHb9lvN3kt",
       githubUrl: "https://github.com/Humanitariansai/Dewey",
       youtubeUrl: "https://youtube.com/playlist?list=PLgOGgHS58rB_FwoBNQrC-4FvHb9lvN3kt",
-      fullDescription: "The Dewey framework is an open-source platform for AI-powered educational intelligence. This experimental project creates an ecosystem of specialized educational agents orchestrated by a central coordination layer to transform learning experiences for students, educators, and professionals. Led by Professor Nik Bear Brown, PhD, MBA, this educational experiment emphasizes learning through building, inviting contributors to discover effective approaches through practical implementation.",
+      fullDescription: "The Dewey framework is an open-source platform for AI-powered educational intelligence. This experimental project creates an ecosystem of specialized educational agents orchestrated by a central coordination layer to transform learning experiences for students, educators, and professionals. Led by Brutalist.art, this educational experiment emphasizes learning through building, inviting contributors to discover effective approaches through practical implementation.",
       keyFeatures: [
         {
           title: "Content Generation Agents",
@@ -179,7 +179,7 @@ export default function ProjectsPage() {
       title: "Mycroft",
       description: "An open source educational experiment in AI-powered investment intelligence. Named after Sherlock Holmes's enigmatic elder brother, the Mycroft framework explores how a ecosystem of specialized agents might work in concert to analyze the AI sector while implementing disciplined investment strategies.",
       videoId: "1H0hsBU_foA?si=lrMunwT8GKiX8f6S",
-      githubUrl: "https://github.com/nikbearbrown/Mycroft",
+      githubUrl: "https://github.com/brutalist-art/Mycroft",
       youtubeUrl: "https://www.youtube.com/playlist?list=PLgOGgHS58rB_nThkcMlBVf4Y6QLB9Bi3K",
       fullDescription: "The Mycroft framework represents an educational experiment in AI-powered investment intelligence. With its tagline \"Using AI to Invest in AI,\" this open-source platform explores how a ecosystem of specialized agents might work in concert to analyze the rapidly evolving artificial intelligence sector while implementing disciplined investment strategies.",
       keyFeatures: [

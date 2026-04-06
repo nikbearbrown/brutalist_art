@@ -15,7 +15,7 @@ export async function generateMetadata({
   const { slug } = await params
   const books = scanBooks(join(process.cwd(), 'public', 'books'))
   const book = books.find(b => b.slug === slug)
-  if (!book) return { title: 'Books - Bear Brown' }
+  if (!book) return { title: 'Books - Brutalist' }
   return {
     title: `${book.title} - Books`,
     description: book.description || book.title,

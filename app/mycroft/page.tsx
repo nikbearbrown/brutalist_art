@@ -106,7 +106,7 @@ export default function MycroftPage() {
              
              <blockquote className="border-l-4 pl-4 italic">
                "We're building to learn. This open-source experiment is about discovering which approaches actually help process information effectively, identify meaningful patterns, and maintain disciplined investment strategies. We don't have all the answers—that's precisely why we're building."
-               <footer className="text-sm mt-2">— Professor Nik Bear Brown, PhD, MBA</footer>
+               <footer className="text-sm mt-2">— Brutalist.art</footer>
              </blockquote>
              
              <h3 className="text-xl font-bold mt-8 mb-4">Potential Agentic Tools for Mycroft Fellows</h3>
@@ -149,7 +149,7 @@ export default function MycroftPage() {
              
              <div className="mt-8 flex flex-col md:flex-row gap-4 items-start">
                <a 
-                 href="https://github.com/nikbearbrown" 
+                 href="https://github.com/brutalist-art"
                  target="_blank" 
                  rel="noopener noreferrer"
                  className="flex items-center gap-2 text-primary hover:underline"
@@ -162,7 +162,7 @@ export default function MycroftPage() {
                </a>
                
                <a 
-                 href="https://www.nikbearbrown.com/mycroft" 
+                 href="https://brutalist.art/mycroft"
                  target="_blank"
                  rel="noopener noreferrer"
                  className="flex items-center gap-2 text-primary hover:underline"
@@ -176,14 +176,14 @@ export default function MycroftPage() {
                </a>
                
                <a 
-                 href="mailto:info@nikbearbrown.com"
+                 href="mailto:bear@brutalist.art"
                  className="flex items-center gap-2 text-primary hover:underline"
                >
                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                  </svg>
-                 Email: info@nikbearbrown.com
+                 Email: bear@brutalist.art
                </a>
              </div>
            </div>
@@ -195,13 +195,13 @@ export default function MycroftPage() {
              Mycroft provides an educational framework for AI-driven investment intelligence. Explore the codebase, contribute to experimental components, or join our collaborative learning community.
            </p>
            <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
-             <PrimaryButton href="https://github.com/nikbearbrown">
+             <PrimaryButton href="https://github.com/brutalist-art">
                Mycroft GitHub
              </PrimaryButton>
-             <SecondaryButton href="https://www.nikbearbrown.com/mycroft">
+             <SecondaryButton href="https://brutalist.art/mycroft">
                Mycroft Website
              </SecondaryButton>
-             <SecondaryButton href="mailto:info@nikbearbrown.com">
+             <SecondaryButton href="mailto:bear@brutalist.art">
                Contact Us
              </SecondaryButton>
            </div>

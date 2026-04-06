@@ -6,7 +6,7 @@ import NotesBrowser from './NotesBrowser'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Notes - Bear Brown',
+  title: 'Notes - Brutalist',
   description: 'Notes, documentation, and reference materials.',
 }
 

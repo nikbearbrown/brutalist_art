@@ -45,7 +45,7 @@ export default function PopperPage() {
               </p>
               
               <p>
-                Led by Professor Nik Bear Brown, PhD, MBA, this experimental project emphasizes learning by building, inviting contributors to discover what approaches actually work in practice rather than claiming to have definitive solutions.
+                Led by Brutalist.art, this experimental project emphasizes learning by building, inviting contributors to discover what approaches actually work in practice rather than claiming to have definitive solutions.
               </p>
               
               <h3 className="text-xl font-bold mt-6 mb-3">Philosophical Foundations</h3>

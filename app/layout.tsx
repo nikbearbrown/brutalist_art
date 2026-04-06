@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Bear Brown',
+  title: 'Brutalist',
   description: 'Educator, artist, musician, and AI innovator dedicated to advancing artificial intelligence for social good.',
 }
 

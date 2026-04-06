@@ -24,7 +24,7 @@ export async function generateMetadata({
       }
     }
   }
-  return { title: 'Books - Bear Brown' }
+  return { title: 'Books - Brutalist' }
 }
 
 export default async function ChapterPage({

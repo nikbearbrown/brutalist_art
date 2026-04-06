@@ -22,8 +22,8 @@ const sql = neon(process.env.DATABASE_URL!)
 const title = 'AI Adoption Across Industries — What the Data Shows'
 const subtitle = 'A look at where AI is gaining real traction'
 const slug = 'ai-adoption-across-industries'
-const byline = `Few advisors put skin in the game the way Bear Brown does — building bespoke AI solutions, taking equity instead of checks for early-stage advising, and connecting startups with top engineering graduates before the competition finds them. An Associate Teaching Professor of Engineering at Northeastern University, Ph.D., MBA, and founder of Bear Brown & Company, he's spent years making AI practical, ethical, and accessible — inside the classroom, inside the lab, and inside the cap table.
-Follow his work at https://www.bearbrown.co/`
+const byline = `Few advisors put skin in the game the way Brutalist does — building bespoke AI solutions, taking equity instead of checks for early-stage advising, and connecting startups with top engineering graduates before the competition finds them. An Associate Teaching Professor of Engineering at Northeastern University, Ph.D., MBA, and founder of Brutalist, he's spent years making AI practical, ethical, and accessible — inside the classroom, inside the lab, and inside the cap table.
+Follow his work at https://www.brutalist.art/`
 
 const content = `<p>Artificial intelligence is no longer a uniform phenomenon. Adoption rates vary dramatically by sector, shaped by regulatory environment, data availability, and organizational appetite for change.</p>
 
