@@ -19,7 +19,7 @@ export default function ConsultingPage() {
             Cutting-edge AI solutions for education and social impact, led by Brutalist. I provide expert consulting services in collaboration with Humanitarians AI to help organizations leverage AI for transformation.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <PrimaryButton href="mailto:bear@brutalist.art?subject=Consulting Inquiry">
+            <PrimaryButton href="mailto:bear@bearbrown.co?subject=Consulting Inquiry">
               Request a Consultation
             </PrimaryButton>
             <SecondaryButton href="#services">
@@ -248,7 +248,7 @@ export default function ConsultingPage() {
                 </div>
               </div>
               <div className="mt-6 flex flex-wrap gap-4">
-                <PrimaryButton href="mailto:bear@brutalist.art?subject=Consulting Inquiry">
+                <PrimaryButton href="mailto:bear@bearbrown.co?subject=Consulting Inquiry">
                   Contact Me
                 </PrimaryButton>
                 <SecondaryButton href="https://github.com/brutalist-art" target="_blank" rel="noopener noreferrer">
@@ -265,7 +265,7 @@ export default function ConsultingPage() {
           <section>
             <h2 className="text-3xl font-bold mb-6">Transform Your Organization with AI</h2>
             <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
-              <PrimaryButton href="mailto:bear@brutalist.art?subject=Consulting Inquiry">
+              <PrimaryButton href="mailto:bear@bearbrown.co?subject=Consulting Inquiry">
                 Request a Consultation
               </PrimaryButton>
               <SecondaryButton href="/about">

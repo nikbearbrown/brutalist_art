@@ -73,7 +73,7 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold mb-4">Connect</h2>
             <p>
               Bear is open to consulting, collaboration, and speaking engagements. Reach out at{' '}
-              <a href="mailto:bear@brutalist.art" className="text-primary hover:underline">bear@brutalist.art</a>.
+              <a href="mailto:bear@bearbrown.co" className="text-primary hover:underline">bear@bearbrown.co</a>.
             </p>
             <div className="flex flex-wrap gap-4 mt-4 not-prose">
               <a href="https://github.com/brutalist-art" target="_blank" rel="noopener noreferrer"

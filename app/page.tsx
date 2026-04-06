@@ -24,7 +24,7 @@ const SERVICES = [
     title: 'Built for Non-Developers',
     description:
       'Ten-minute setup. No JavaScript required. Describe the deck you need and the code gets written. The medium was always more powerful than PowerPoint — now it\'s accessible.',
-    link: { label: 'Get started →', href: 'mailto:bear@brutalist.art' },
+    link: { label: 'Get started →', href: 'mailto:bear@bearbrown.co' },
   },
   {
     icon: Target,
